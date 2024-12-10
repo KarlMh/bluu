@@ -12,7 +12,7 @@ TOKENS = {
 
     # Bold, italic, underline
     'bold': rf"(b|bold){FLOW}\s*([^<]+)\s*<",
-    'italic': rf"(i|italic){FLOW}\s*([^<]+)\s*<",
+    'italic': rf"(?<!\w)(i|italic){FLOW}\s*([^<]+)\s*<",
     'underline': rf"(u|underline){FLOW}\s*([^<]+)\s*<",
     'strike': rf"(s|strike){FLOW}\s*([^<]+)\s*<",
 
@@ -22,9 +22,10 @@ TOKENS = {
     # Lists
     'list': rf"(list|l){FLOW}\s*\n((?:\s*[-\d+\.]\s*.+\n)+?)\s*<",
 
-    # Code
-    'code': rf"code{FLOW}([a-zA-Z]*)\s*\n(.*?)\s*<",
-    
+    # Code block token allowing spaces after '->'
+    # Unified code token allowing both inline and block code
+    'code': rf"code{FLOW}\s*([a-zA-Z]*)\s*\n?(.*?)(?:\n<|<)",
+
     # Inline code
     'inline_code': rf"code{FLOW}\s*([^<]+)\s*<",
 

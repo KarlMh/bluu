@@ -1,3 +1,70 @@
-h1->
-.bluu
-Build Logical, Unified Utilities.
+# Headings
+h1-> Welcome to Bluu Markup
+h2-> Features
+h3-> A Simple Guide
+h4-> Tokens Usage
+h5-> Notes
+h6-> End of the Document
+
+# Bold, Italic, Underline, Strike
+b-> This is bold text <
+i-> This is italic text <
+u-> This is underlined text <
+s-> This is strikethrough text <
+
+# Links
+link-> Click here | https://example.com
+
+# Lists
+list->
+- Item 1
+- Item 2
+- Item 3
+<
+
+# Code
+codepython->
+def hello_world():
+    print("Hello, World!")
+<
+
+# Inline Code
+code-> Inline code example <
+
+# Images
+img-> A beautiful sunset | https://example.com/sunset.jpg
+
+# Quotes
+quote->
+This is an inspiring quote.
+<
+
+# Tables
+table->
+Header 1 | Header 2 | Header 3
+-------- | --------- | --------
+Cell 1   | Cell 2    | Cell 3
+<
+
+# Horizontal Line
+hr->standard
+hr->dotted
+hr->thick
+
+# Text
+This is a simple text line.
+
+# Color Text
+color-> This is colored text | #FF5733
+
+# New Line
+->3
+
+# Emojis
+emoji-> smiley_face
+
+# Collapse Section
+collapse-> Expand to see | This is the hidden content <
+
+# Bluuu Block
+bluu{Custom content inside a special Bluuu block.}
